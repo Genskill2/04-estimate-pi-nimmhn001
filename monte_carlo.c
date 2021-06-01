@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
+#define M_PI 3.14159
 
 float mc_pi(int);
 
@@ -37,6 +38,24 @@ int main(void) {
       abort();
     }
   }
+  loat mc_pi(int n){
+
+      float x, y; 
+      int c = 0; // count of darts inside the circle.
+
+      for(int  i = 0; i < n; i++)
+      {
+          x = frandom();
+          y = frandom();
+
+          if( x*x + y*y <= 1)
+            c++;
+      }
+      return 4*((float)c/n);
+
+
+    }
+
 }
 
 
