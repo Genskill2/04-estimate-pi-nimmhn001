@@ -15,6 +15,25 @@ int main(void) {
   float pi0;
   float pi1;
   
+  
+  float mc_pi(int n){
+
+      float x, y; 
+      int c = 0; // count of darts inside the circle.
+
+      for(int  i = 0; i < n; i++)
+      {
+          x = frandom();
+          y = frandom();
+
+          if( x*x + y*y <= 1)
+            c++;
+      }
+      return 4*((float)c/n);
+
+
+    }
+  
   pi0 = mc_pi(25000);
   pi1 = mc_pi(25000);
   printf("%f %f\n", pi0, pi1);
@@ -37,23 +56,7 @@ int main(void) {
       abort();
     }
   }
-  float mc_pi(int n){
-
-      float x, y; 
-      int c = 0; // count of darts inside the circle.
-
-      for(int  i = 0; i < n; i++)
-      {
-          x = frandom();
-          y = frandom();
-
-          if( x*x + y*y <= 1)
-            c++;
-      }
-      return 4*((float)c/n);
-
-
-    }
+  
 
 }
 
