@@ -38,7 +38,7 @@ int main(void) {
       abort();
     }
   }
-  loat mc_pi(int n){
+  float mc_pi(int n){
 
       float x, y; 
       int c = 0; // count of darts inside the circle.
