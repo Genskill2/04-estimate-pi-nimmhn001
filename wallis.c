@@ -7,6 +7,24 @@
 float wallis_pi(int);
 
 int main(void) {
+	
+  float wallis_pi(int n)
+{
+  float pi = 1;
+  for(int i = 1; i <= n; i++)
+	{
+        float numerator , denominator;
+        numerator =  (4*(i*i));
+        denominator = ((4*(i*i)) - 1);
+		pi *= ( numerator / denominator ) ;
+
+	}
+	return 2*pi;
+}
+  	
+	
+	
+	
   float pi;
   for (int i=0; i<5; i++) {
     pi = wallis_pi(i);
@@ -27,19 +45,6 @@ int main(void) {
     }
   }
     
-    float wallis_pi(int n)
-{
-  float pi = 1;
-  for(int i = 1; i <= n; i++)
-	{
-        float numerator , denominator;
-        numerator =  (4*(i*i));
-        denominator = ((4*(i*i)) - 1);
-		pi *= ( numerator / denominator ) ;
-
-	}
-	return 2*pi;
-}
   
     
   
